@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using API.Controllers;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore; // Correct namespace for EF Core
 using Store.Data;
 using Store.Entity;
@@ -7,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace Store.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class ProductsController : ControllerBase
+    
+    public class ProductsController : BaseApiController
     {
         private readonly StoreContext _context;
 
